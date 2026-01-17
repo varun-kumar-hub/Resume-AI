@@ -3,42 +3,19 @@
 const IGNORED_TERMS = new Set([
     "and", "the", "of", "in", "to", "a", "is", "for", "with", "on", "as", "by", "an", "are", "be", "or", "it",
     "at", "from", "that", "this", "which", "we", "you", "your", "can", "will", "have", "not", "but", "all",
-    "skills", "experience", "role", "job", "description", "requirements", "knowledge", "proficiency", "strong",
-    "ability", "years", "work", "team", "development", "design", "good", "excellent", "must", "preferred", "plus",
-    "looking", "seeking", "responsible", "qualifications", "degree", "bachelors", "masters", "computer", "science",
-    "engineering", "software", "application", "applications", "systems", "solutions", "environment", "environments",
-    "code", "coding", "programming", "maintain", "maintaining", "debug", "debugging", "test", "testing",
-    "deploy", "deploying", "implement", "implementing", "participate", "participating", "collaborate", "collaborating",
-    "support", "supporting", "review", "reviews", "documentation", "documenting", "best", "practices", "familiarity",
+    "looking", "seeking", "responsible", "qualifications", "degree", "bachelors", "masters",
+    "participate", "participating", "collaborate", "collaborating",
+    "review", "reviews", "documentation", "documenting", "best", "practices", "familiarity",
     "understanding", "hands-on", "proven", "track", "record", "build", "building", "create", "creating",
     "new", "existing", "features", "functionality", "issues", "bugs", "root", "cause", "analysis",
-    "performance", "scalability", "reliable", "efficient", "robust", "secure", "security", "high", "quality",
-    "agile", "scrum", "kanban", "methodologies", "lifecycle", "sdlc", "deliver", "delivering", "ensure", "ensuring",
+    "performance", "scalability", "reliable", "efficient", "robust", "secure", "high", "quality",
+    "deliver", "delivering", "ensure", "ensuring",
     "adhere", "adhering", "standards", "specifications", "user", "users", "customer", "customers", "client", "clients",
-    "business", "technical", "functional", "non-functional", "requirements", "needs", "stakeholders",
-    "communication", "written", "verbal", "interpersonal", "skills", "problem-solving", "analytical",
+    "needs", "stakeholders",
+    "written", "verbal", "interpersonal", "problem-solving", "analytical",
     "detail-oriented", "self-motivated", "independent", "team-player", "monitor", "monitoring",
     "optimize", "optimizing", "improve", "improving", "enhance", "enhancing", "platform", "platforms",
-    "infrastructure", "architecture", "architectures", "patterns", "principles", "concepts", "technologies",
-    "tools", "stacks", "frameworks", "libraries", "apis", "services", "microservices", "frontend", "backend",
-    "fullstack", "web", "mobile", "desktop", "cloud", "devops", "database", "databases", "storage",
-    "network", "networking", "protocols", "http", "https", "rest", "restful", "soap", "graphql",
-    "json", "xml", "yaml", "html", "css", "javascript", "typescript", "java", "python", "c#", "c++",
-    "go", "golang", "ruby", "php", "swift", "kotlin", "objective-c", "scala", "rust", "perl", "bash", "shell",
-    "sql", "nosql", "mysql", "postgresql", "postgres", "mongodb", "mongo", "redis", "elasticsearch",
-    "cassandra", "dynamodb", "oracle", "sqlserver", "sqlite", "mariadb", "firebase", "supbase",
-    "aws", "azure", "gcp", "google", "cloud", "amazon", "web", "services", "microsoft", "docker",
-    "kubernetes", "k8s", "jenkins", "gitlab", "github", "bitbucket", "jira", "confluence",
-    "react", "angular", "vue", "svelte", "nextjs", "nuxtjs", "express", "flask", "django", "spring",
-    "boot", "rails", "laravel", "asp.net", "core", "node", "nodejs", "deno", "jquery", "bootstrap",
-    "tailwind", "material-ui", "semantic-ui", "foundation", "redux", "mobx", "context", "hooks",
-    "class", "classes", "object", "objects", "oriented", "functional", "procedural", "imperative",
-    "declarative", "components", "modules", "packages", "dependencies", "version", "control", "git",
-    "svn", "mercurial", "ci/cd", "continuous", "integration", "deployment", "delivery", "pipeline",
-    "pipelines", "automation", "automated", "manual", "unit", "integration", "e2e", "acceptance",
-    "regression", "load", "stress", "performance", "security", "penetration", "access", "identity",
-    "authentication", "authorization", "encryption", "hashing", "salt", "tokens", "jwt", "oauth",
-    "sso", "saml", "openid", "connect", "basic", "digest", "adopt", "using", "use", "utilize", "consume"
+    "adopt", "using", "use", "utilize", "consume"
 ]);
 
 // Known tech dictionary to whitelist valid skills
@@ -61,7 +38,10 @@ const TECH_DICTIONARY = new Set([
     "blockchain", "crypto", "smart contracts", "solidity", "ethereum", "bitcoin",
     "cybersecurity", "penetration testing", "ethical hacking", "cryptography", "network security",
     "adobe", "photoshop", "illustrator", "xd", "figma", "sketch", "invision", "zeplin",
-    "databases", "database", "relational database", "rdbms", "system design", "distributed systems"
+    "databases", "database", "relational database", "rdbms", "system design", "distributed systems",
+    "software engineering", "computer science", "web development", "mobile development", "full stack", "frontend", "backend",
+    "rest api", "api design", "unit testing", "integration testing", "e2e testing", "automated testing",
+    "communication skills", "teamwork", "leadership", "mentoring", "code review", "debugging", "troubleshooting"
 ]);
 
 // Normalization map for tech skills (Case insensitive input -> Normalized output)
