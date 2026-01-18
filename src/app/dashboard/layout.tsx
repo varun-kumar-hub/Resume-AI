@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { FileText, Home, LayoutDashboard, LogOut, Settings, User } from 'lucide-react'
+import { Briefcase, FileText, Home, LayoutDashboard, LogOut, Settings, User, Wand2 } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 
@@ -42,6 +42,18 @@ export default async function DashboardLayout({
                         <Button variant="ghost" className="w-full justify-start gap-2">
                             <FileText className="h-4 w-4" />
                             My Resumes
+                        </Button>
+                    </Link>
+                    <Link href="/dashboard/tracker">
+                        <Button variant="ghost" className="w-full justify-start gap-2">
+                            <Briefcase className="h-4 w-4" />
+                            Tracker
+                        </Button>
+                    </Link>
+                    <Link href="/dashboard/tailor">
+                        <Button variant="ghost" className="w-full justify-start gap-2">
+                            <Wand2 className="h-4 w-4" />
+                            AI Tailor
                         </Button>
                     </Link>
                     <Link href="/dashboard/settings">

@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { createClient } from "@/lib/supabase/server"
 import { formatDistanceToNow } from "date-fns"
 import { FileText, Calendar, TrendingUp } from "lucide-react"
+import { ResumeCardActions } from "@/components/resume-card-actions"
 
 export const dynamic = 'force-dynamic'
 
@@ -20,10 +21,14 @@ export default async function ResumesPage() {
                 {resumes?.map((resume) => (
                     <Card key={resume.id} className="hover:bg-muted/50 transition-colors">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                            <CardTitle className="text-sm font-medium">
-                                {resume.file_name}
+                            <CardTitle className="text-sm font-medium truncate max-w-[180px]" title={resume.name || resume.file_name}>
+                                {resume.name || resume.file_name}
                             </CardTitle>
-                            <FileText className="h-4 w-4 text-muted-foreground" />
+                            <ResumeCardActions
+                                resumeId={resume.id}
+                                currentName={resume.name}
+                                fileName={resume.file_name}
+                            />
                         </CardHeader>
                         <CardContent>
                             <div className="flex flex-col gap-4">
