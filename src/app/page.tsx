@@ -9,16 +9,6 @@ import { motion } from 'framer-motion'
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-50 overflow-hidden">
-      {/* animated background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover opacity-30"
-      >
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-      </video>
-
       {/* Header */}
       <motion.header
         initial={{ y: -100, opacity: 0 }}
@@ -28,7 +18,7 @@ export default function Home() {
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-bold text-white animate-pulse">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-bold text-white">
               RA
             </div>
             <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -73,15 +63,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative flex flex-1 flex-col items-center justify-center space-y-10 px-4 py-24 text-center sm:px-6 lg:px-8">
         {/* floating shapes */}
-        <motion.div
-          className="pointer-events-none absolute top-10 left-10 h-32 w-32 rounded-full bg-blue-300 opacity-20 animate-ping"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.5, 0.2] }}
-          transition={{ duration: 3, repeat: Infinity }}
+        <div
+          className="pointer-events-none absolute top-10 left-10 h-32 w-32 rounded-full bg-blue-300 opacity-20"
         />
-        <motion.div
-          className="pointer-events-none absolute bottom-20 right-20 h-40 w-40 rounded-full bg-purple-300 opacity-20 animate-ping"
-          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.6, 0.2] }}
-          transition={{ duration: 4, repeat: Infinity }}
+        <div
+          className="pointer-events-none absolute bottom-20 right-20 h-40 w-40 rounded-full bg-purple-300 opacity-20"
         />
 
         <motion.div
